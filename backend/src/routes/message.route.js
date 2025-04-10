@@ -8,7 +8,7 @@ import {
 
 const router = express.Router();
 
-// ✅ Route to get all users except current user for sidebar display
+// ✅ Route to get all users except current user (for sidebar display)
 router.get("/users", protectRoute, getUsersForSidebar);
 
 // ✅ Route to get all messages exchanged with a specific user
