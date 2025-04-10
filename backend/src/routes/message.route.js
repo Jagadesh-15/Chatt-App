@@ -1,20 +1,3 @@
-// import express from "express"
-// import { protectRoute } from "../middleware/auth.middleware.js";
-// import { getUsersForSidebar, getMessages ,sendMessages} from "../controllers/message.controller.js";
-// const router = express.Router();
-
-// router.get("/users",protectRoute, getUsersForSidebar);
-// router.get("/:id",protectRoute, getMessages);
-
-// router.post("/send/:id",protectRoute,sendMessages);
-
-
-
-
-
-// export default router;
-// routes/message.routes.js
-
 import express from "express";
 import { protectRoute } from "../middleware/auth.middleware.js";
 import {
@@ -25,13 +8,13 @@ import {
 
 const router = express.Router();
 
-// ✅ Get all users except current for sidebar
+// ✅ Route to get all users except current user for sidebar display
 router.get("/users", protectRoute, getUsersForSidebar);
 
-// ✅ Get chat messages between logged-in user and selected user
+// ✅ Route to get all messages exchanged with a specific user
 router.get("/:id", protectRoute, getMessages);
 
-// ✅ Send a new message (text/image)
+// ✅ Route to send a message (text/image) to a specific user
 router.post("/send/:id", protectRoute, sendMessages);
 
 export default router;
