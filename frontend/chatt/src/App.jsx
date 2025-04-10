@@ -15,7 +15,7 @@ import ProfilePage from "./pages/ProfilePage";
 import { useAuthStore } from "./store/useAuthStore"; // Zustand store
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import { useThemeStore } from "./store/useThemeStore";
 
 const App = () => {
